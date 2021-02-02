@@ -1,8 +1,8 @@
-import './App.css';
+import './style/App.scss';
 import ToDoContainer from './Components/ToDo/toDoContainer';
 import ToDoneContainer from './Components/ToDone/toDoneContainer';
 import {Container} from 'react-bootstrap';
-
+import Form from './Components/form'
 
 import React, { Component } from 'react'
 
@@ -86,9 +86,13 @@ export class App extends Component {
     const toDone = this.state.myList.filter(e2 => ! e2.done);
     return (
       <div className="App">
-        <Container fluid>
-          <ToDoContainer arrToDO = {toDo} handleChange = {this.updateItem} handleAddToDo={this.addItem}/>
-          <ToDoneContainer arrToDone = {toDone} handleChange = {this.updateItem} />
+        <Container className='main-container'>
+          <Form handleAddToDo={this.addItem}/>
+          <div className= 'row justify-content-around'>
+          <ToDoContainer className = 'col' arrToDO = {toDo} handleChange = {this.updateItem}/>
+          <ToDoneContainer className = 'col' arrToDone = {toDone} handleChange = {this.updateItem} />
+
+          </div>
         </Container>
       </div>
     )

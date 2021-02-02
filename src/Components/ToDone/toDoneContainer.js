@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import ToDone from './toDone';
+import{Jumbotron} from 'react-bootstrap'
 
 export class toDoneContainer extends Component {
   render() {
     const{arrToDone, handleChange} = this.props;
     return (
-      <div>
-        <h4>Backlog:</h4>
+      <div className='col-6'>
+        <Jumbotron>
+
+          <h4>Backlog:</h4>
         {
           arrToDone.map( item => {
             return(
@@ -18,6 +21,7 @@ export class toDoneContainer extends Component {
             )
           })
         }
+        </Jumbotron>
       </div>
     )
   }
