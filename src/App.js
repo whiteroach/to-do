@@ -66,6 +66,18 @@ export class App extends Component {
     )
   }
 
+  addItem = value => {
+    const newItem = {
+      id: this.state.myList.length +1,
+      task: value,
+      done: true
+    }
+
+    this.setState({
+      myList:[...this.state.myList,newItem]
+    }
+    )
+  }
 
 
 
@@ -75,7 +87,7 @@ export class App extends Component {
     return (
       <div className="App">
         <Container fluid>
-          <ToDoContainer arrToDO = {toDo} handleChange = {this.updateItem}/>
+          <ToDoContainer arrToDO = {toDo} handleChange = {this.updateItem} handleAddToDo={this.addItem}/>
           <ToDoneContainer arrToDone = {toDone} handleChange = {this.updateItem} />
         </Container>
       </div>
