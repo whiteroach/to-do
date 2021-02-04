@@ -68,16 +68,19 @@ export class App extends Component {
   }
 
   addItem = value => {
-    const newItem = {
-      id: this.state.myList.length +1,
-      task: value,
-      done: true
-    }
+    if(value != ''){
+      const newItem = {
+        id: this.state.myList.length +1,
+        task: value,
+        done: true
+      }
+  
+      this.setState({
+        myList:[...this.state.myList,newItem]
+      }
+      )
 
-    this.setState({
-      myList:[...this.state.myList,newItem]
     }
-    )
   }
 
 
