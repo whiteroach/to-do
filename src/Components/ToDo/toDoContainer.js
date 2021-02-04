@@ -34,8 +34,8 @@ export class toDoContainer extends Component {
           <input value = {this.state.value} type='text' id='task-input' name='task' onChange={this.handleNewToDoChange}/>
           <input type='submit' value = 'ADD'/>
         </form> */}
-        <Jumbotron>
-        <h4>ToDO:</h4>
+        <Jumbotron className='jumbo'>
+        <h4>TODO:</h4>
         {
           arrToDO.map( item => {
             return(

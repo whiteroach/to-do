@@ -7,9 +7,9 @@ export class toDoneContainer extends Component {
     const{arrToDone, handleChange} = this.props;
     return (
       <div className='col-6'>
-        <Jumbotron>
+        <Jumbotron className='jumbo'>
 
-          <h4>Backlog:</h4>
+          <h4>BACKLOG:</h4>
         {
           arrToDone.map( item => {
             return(

@@ -1,18 +1,141 @@
 @import './variables';
 
 body{
-  background-color: $main-color;
+  background-color: $bg-color;
   font-family: $font !important;
 }
+
+h4{
+  letter-spacing: 0.4rem;
+}
+
+
+
 .App{
-  background-color:$main-color;
+
+  background-color:$bg-color;
+
   &:first-child{
     height:100vh;
-    background-color: $main-color;
+    background-color: $bg-color;
+  }
+  Nav{
+    
+    padding-top: 3rem;
+    padding-right: 0;
+    margin-right: 0;
+    font-family: $font;
+    letter-spacing: 0.5rem;
+    display: flex!important;
+    justify-content: flex-end;
+    
+    h1{
+      margin-left:0 !important;
+      
+    }
+  }
+
+  Form{
+    border: 3px dashed #333;
+    border-radius: 10px;
+    padding: 1rem;
+    // margin-left:0.1rem;
+    margin-right:0.1rem;
+    margin-bottom: 2rem;
+    width:25vw;
+    display: flex;
+    flex-direction: column;
+
+    .input-text{
+      align-self:flex-start;
+      width: 100%;
+      label{
+        padding:0.2rem;
+        letter-spacing: 0.2rem;
+        font-size: 18px;
+      }
+
+      input[type=text]{
+        
+        background-color: $bg-color;
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        width: 80%;
+        margin: auto;
+
+        &:focus{
+          border:$tertiary-color 1px solid;
+        }
+      }
+    }
+    .btn-form{
+      width: 20%;
+      background-color: $bg-color;
+      border: solid $tertiary-color 1px;
+      border-radius: 5px;
+      align-self: flex-end;
+      margin-top: 1rem;
+      
+      &:hover{
+        background-color: $tertiary-color;
+        color:$bg-color;
+      }
+
+    }
+
+  }
+
+  .jumbo {
+    background-color: $bg-color !important;
+    // border: 1px solid black;
   }
 }
-// .main-container{
-//   height:100vh;
-//   background-color: $main-color;
-// }
 
+.todo-card{
+  border: 1px dashed $secondary-color;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: $tertiary-color;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  p{
+    padding-right: 1rem;
+  }
+  Button{
+   min-width: 10% !important;
+    height: 20% !important;
+  }
+}
+
+.todone-card{
+  border: 1px dashed $bg-color;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: $quaternary-color;
+  color: $bg-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  p{
+    padding-right: 1rem;
+  }
+
+  button{
+    // width: 10% !important;
+    min-width: 10%;
+    height: 20% !important;
+    background-color:#fb9492;
+    border: 1px solid #fb9492;
+    border-radius: 3px;
+  }
+} 
+
+.list-box{
+  border: 2px dashed $secondary-color
+}

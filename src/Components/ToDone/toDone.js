@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import {Button} from 'react-bootstrap'
+
+
+
+
 export class toDone extends Component {
   render() {
     const{item, onStatusChange} = this.props;
     return (
       <div>
-        <div>
+        <div className='todone-card'>
           <p>{item.task}</p>
-          <Button onClick = {()=> {onStatusChange(item.id)}}></Button>
+          <button onClick = {()=> {onStatusChange(item.id)}} ><i class="fas fa-redo-alt"></i></button>
         </div>
       </div>
     )

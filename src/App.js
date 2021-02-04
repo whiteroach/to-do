@@ -3,6 +3,7 @@ import ToDoContainer from './Components/ToDo/toDoContainer';
 import ToDoneContainer from './Components/ToDone/toDoneContainer';
 import {Container} from 'react-bootstrap';
 import Form from './Components/form'
+import Nav from './Components/navbar'
 
 import React, { Component } from 'react'
 
@@ -87,8 +88,9 @@ export class App extends Component {
     return (
       <div className="App">
         <Container className='main-container'>
+        <Nav />
           <Form handleAddToDo={this.addItem}/>
-          <div className= 'row justify-content-around'>
+          <div className= 'row justify-content-around list-box'>
           <ToDoContainer className = 'col' arrToDO = {toDo} handleChange = {this.updateItem}/>
           <ToDoneContainer className = 'col' arrToDone = {toDone} handleChange = {this.updateItem} />
 

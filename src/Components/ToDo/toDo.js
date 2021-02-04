@@ -6,9 +6,9 @@ export class toDo extends Component {
     const{item, onStatusChange} = this.props;
     return (
       <div>
-        <div>
+        <div className='todo-card'>
           <p>{item.task}</p>
-          <Button onClick = { () => onStatusChange(item.id)}></Button>
+          <Button variant="dark" size="sm" onClick = { () => onStatusChange(item.id)}><i class="fas fa-check"></i></Button>
         </div>
       </div>
     )

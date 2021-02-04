@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export class form extends Component {
   state = {
-    value : ''
+    value: ''
   }
 
   handleNewToDoChange = event => {
@@ -17,19 +17,22 @@ export class form extends Component {
     this.props.handleAddToDo(this.state.value);
 
     this.setState({
-      value:''
+      value: ''
     });
 
-    
+
   }
   render() {
     return (
       <div>
-         <form className='row' onSubmit = {this.handleSubmit}>
-          <label for ='task'>Task: </label>
-          <input value = {this.state.value} type='text' id='task-input' name='task' onChange={this.handleNewToDoChange}/>
-          <input type='submit' value = 'ADD'/>
+        <form className='row' onSubmit={this.handleSubmit}>
+          <div className='input-text'>
+            <label for='task'>TASK: </label>
+            <input value={this.state.value} type='text' id='task-input' name='task' onChange={this.handleNewToDoChange} />
+          </div>
+          <input className='btn-form' type='submit' value='ADD' />
         </form>
+      
       </div>
     )
   }
