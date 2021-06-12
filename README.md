@@ -2,6 +2,6 @@
 
 Simple todo application developed during class at DCI. 
 
-##### Technology : 
+##### Technologies : 
 * React
 * Sass
